@@ -1,0 +1,17 @@
+name = "solenne-crew-bot"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# Non-secret configuration. Override per-environment with `wrangler.toml`
+# [vars] edits, or just change the defaults below before deploying.
+[vars]
+GITHUB_OWNER = "starshipsolenne"
+GITHUB_REPO = "starshipsolenne.github.io"
+GITHUB_BRANCH = "main"
+DISCORD_CHANNEL_ID = "REPLACE_WITH_REVIEW_CHANNEL_ID"
+ALLOWED_ORIGIN = "https://starshipsolenne.github.io"
+
+# Secrets (set with `wrangler secret put <NAME>`, do NOT put them here):
+#   DISCORD_PUBLIC_KEY  - from the Discord Developer Portal, General Information
+#   DISCORD_BOT_TOKEN   - from the Bot tab, used to post channel messages & edit interaction responses
+#   GITHUB_TOKEN        - a fine-grained PAT scoped to Contents: Read/Write on this repo only

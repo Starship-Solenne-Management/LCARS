@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-	<title>USS SOLENNE - L.C.A.R.S - CREW MANIFEST</title>
+	<title>USS SOLENNE - L.C.A.R.S - CHARACTER SUBMISSION</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="date=no">
@@ -13,6 +13,90 @@
 	<link rel="stylesheet" type="text/css" href="../css/lcars-ultra-picard.css">
 	<link rel="stylesheet" type="text/css" href="../css/custom.css">
 	<script src="../js/jquery-3-7-0.min.js"></script>
+	<style>
+		#submit-form {
+			max-width: 640px;
+		}
+
+		#submit-form .field {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 18px;
+		}
+
+		#submit-form label {
+			text-transform: uppercase;
+			color: var(--blue);
+			font-size: var(--sub-fonts);
+			margin-bottom: 6px;
+			letter-spacing: 0.05em;
+		}
+
+		#submit-form input,
+		#submit-form select,
+		#submit-form textarea {
+			background-color: #000;
+			border: 2px solid var(--orange);
+			color: var(--font-color);
+			padding: 8px 10px;
+			border-radius: 6px;
+		}
+
+		#submit-form input:focus,
+		#submit-form select:focus,
+		#submit-form textarea:focus {
+			outline: none;
+			border-color: var(--pale-orange);
+		}
+
+		#submit-form .hint {
+			font-size: 0.7rem;
+			color: var(--font-color);
+			opacity: 0.7;
+			margin-top: 4px;
+		}
+
+		#submit-btn {
+			background-color: #000;
+			border: 3px solid var(--orange);
+			color: var(--orange);
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 12px 20px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: var(--nav-font);
+		}
+
+		#submit-btn:hover:not(:disabled) {
+			border-color: var(--pale-orange);
+			color: var(--pale-orange);
+		}
+
+		#submit-btn:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+
+		#submit-status {
+			margin-top: 16px;
+			padding: 10px 14px;
+			border-radius: 6px;
+			display: none;
+		}
+
+		#submit-status.success {
+			display: block;
+			border: 2px solid var(--blue);
+			color: var(--blue);
+		}
+
+		#submit-status.error {
+			display: block;
+			border: 2px solid var(--pale-orange);
+			color: var(--pale-orange);
+		}
+	</style>
 </head>
 
 <body>
@@ -82,6 +166,7 @@
 						<nav id="secondary-nav">
 							<!-- SECONDARY NAVIGATION LINKS -->
 							<a href="crewpages.html">CREW KNOWLEDGE BASE</a>
+							<a href="manifest.html">CREW MANIFEST</a>
 							<a href="resourcepages/shipinfo.html">SHIP INFO</a>							
 							<a href="resourcelibrary.html">RESOURCE LIBARY</a>
 							<a href="sciencespages.html">SCIENCES DIVISION</a>
@@ -89,7 +174,6 @@
 							<a href="commandspages.html">COMMAND DIVISION</a>												
 							<a href="https://discord.com/invite/PW8cfe9YmN" target="_blank">DISCORD</a>
 							<a href="episodes.html" target="_blank">EPISODES</a>
-							<a href="submit-character.html">SUBMIT A CHARACTER</a>
 
 							<!-- END SECONDARY NAVIGATION LINKS -->
 
@@ -114,14 +198,64 @@
 					<main>
 
 						<!-- MAIN CONTENT -->
-						
-						<h1>Crew Manifest</h1>
 
-						<div id="crew-manifest">
-							<p class="small">Loading crew manifest&hellip;</p>
-						</div>
+						<h1>Submit A Character</h1>
 
-						<!-- END MAIN CONTENT -->						
+						<p>Use this form to submit a new character for the crew manifest. Your submission is posted to
+							the staff review channel on Discord &mdash; a staff member will approve or follow up with
+							you there.</p>
+
+						<form id="submit-form">
+							<div class="field">
+								<label for="char-name">Character Name</label>
+								<input type="text" id="char-name" name="name" required maxlength="80" placeholder="Jane Doe">
+							</div>
+
+							<div class="field">
+								<label for="char-rank">Rank</label>
+								<input type="text" id="char-rank" name="rank" maxlength="40" placeholder="Lt. Cmdr., Ensign, Civilian, etc.">
+							</div>
+
+							<div class="field">
+								<label for="char-position">Position / Title</label>
+								<input type="text" id="char-position" name="position" required maxlength="80" placeholder="Chief Engineer">
+							</div>
+
+							<div class="field">
+								<label for="char-division">Division</label>
+								<select id="char-division" name="division" required>
+									<option value="" disabled selected>Select a division&hellip;</option>
+									<option>Flag Staff</option>
+									<option>Command Division</option>
+									<option>Operations Division</option>
+									<option>Engineering Division</option>
+									<option>Medical Division</option>
+									<option>Science Division</option>
+									<option>Security Division</option>
+									<option>Tactical Division</option>
+									<option>Intelligence Division</option>
+									<option>Diplomatic Division</option>
+									<option>Civilian</option>
+								</select>
+							</div>
+
+							<div class="field">
+								<label for="char-doc">Character Bio Doc Link (optional)</label>
+								<input type="url" id="char-doc" name="doc" maxlength="300" placeholder="https://docs.google.com/document/...">
+							</div>
+
+							<div class="field">
+								<label for="char-submitter">Your Discord Username (optional)</label>
+								<input type="text" id="char-submitter" name="submitter" maxlength="60" placeholder="yourname">
+								<div class="hint">So staff can reach you if they have questions about this submission.</div>
+							</div>
+
+							<button type="submit" id="submit-btn">Submit Character</button>
+
+							<div id="submit-status"></div>
+						</form>
+
+						<!-- END MAIN CONTENT -->
 
 						<footer>
 							<div class="footer-inside">
@@ -145,7 +279,7 @@
 		</section>
 	</div>
 	<script type="text/javascript" src="../js/lcars.js"></script>
-	<script type="text/javascript" src="../js/crew-manifest.js"></script>
+	<script type="text/javascript" src="../js/character-submit.js"></script>
 </body>
 
 </html>

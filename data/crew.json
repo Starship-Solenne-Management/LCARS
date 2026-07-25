@@ -1,0 +1,101 @@
+{
+  "rows": [
+    [
+      { "title": "Flag Staff", "members": [] },
+      {
+        "title": "Command Division",
+        "members": [
+          { "name": "Capt. Thea Bunn", "notes": "Commanding Officer" },
+          { "name": "Athena", "notes": "Ship's Android Assistant \u2022 NPC" },
+          {
+            "name": "Lt JG. Lucas Hayes",
+            "notes": "Communications Officer",
+            "link": "https://docs.google.com/document/d/13R8Qz8DiS_hiZwTvlCUU_ftgU1uKuaq626HFRE3qjRI/edit?usp=drivesdk"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Operations Division",
+        "members": [
+          {
+            "name": "Lt. Cmdr. Ko-Fu",
+            "notes": "Chief Operations Officer",
+            "link": "https://docs.google.com/document/d/1Fytgpr9WqB3mGeDwoixIxQM1hU-XXJZhoian1VXwgc0/edit?tab=t.0"
+          }
+        ]
+      },
+      { "title": "Engineering Division", "members": [] }
+    ],
+    [
+      {
+        "title": "Medical Division",
+        "members": [
+          {
+            "name": "Lt. Cmdr. Kaia Draper",
+            "notes": "Ships Counselor",
+            "link": "https://docs.google.com/document/d/1IHvASbMZKzwa8BNiS8hx8XKwx9c87mTTg2kA_zeqmFQ/edit"
+          },
+          {
+            "name": "Lt. T'Lana",
+            "notes": "Nurse",
+            "link": "https://docs.google.com/document/d/19TF2zYyIyJGx7ND7_OJvr9vhnzDvgdsYfvvDlU55wq8/edit?usp=drive_link"
+          },
+          {
+            "name": "Ens. D'jinn D'jarva",
+            "notes": "Nurse",
+            "link": "https://docs.google.com/document/d/18ZkP8CBt14zbf204lmF8XGxTkkhnWxmlOJulh4PbWtg/edit?pli=1&tab=t.0"
+          }
+        ]
+      },
+      {
+        "title": "Science Division",
+        "members": [
+          {
+            "name": "Lt JG. Lihne Carter",
+            "notes": "Xenoanthropogist",
+            "link": "https://docs.google.com/document/d/1NKolZnKXASvKgZxQas3HUXjckM1TtvRzGJ9c3ll-bjI/edit"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Security Division",
+        "members": [
+          {
+            "name": "Prov. Lt. Ma'lanzi Nol Kysoni",
+            "notes": "Acting Chief of Security",
+            "link": "https://docs.google.com/document/d/1W8JA-lBIeTt0P5ygOefiM5BKtEJXavbSegGtOqVSSQs/edit"
+          }
+        ]
+      },
+      { "title": "Tactical Division", "members": [] }
+    ],
+    [
+      { "title": "Intelligence Division", "members": [] },
+      { "title": "Diplomatic Division", "members": [] }
+    ],
+    [
+      {
+        "title": "Civilian",
+        "members": [
+          {
+            "name": "Koth of House Olahg",
+            "notes": "Steward Chef",
+            "link": "https://docs.google.com/document/d/1vGsPZLo0Kramkvd0_8NbDRK-S8rn_R10IUdumazAVsc/edit?tab=t.0"
+          }
+        ]
+      },
+      {
+        "title": "Retired/Deceased/MIA",
+        "titleClass": "dark-blue",
+        "members": [
+          { "name": "Lt. Maria Scarlatti", "notes": "Nurse \u2022 Deceased" },
+          { "name": "Lt. Cmdr. Verena Kessler", "notes": "Chief Medical Officer \u2022 Deceased" }
+        ]
+      }
+    ]
+  ]
+}
